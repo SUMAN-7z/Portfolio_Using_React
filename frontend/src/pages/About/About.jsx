@@ -1,7 +1,7 @@
 import "./About.css";
 import ReactLogo from "/public/assets/images/react.svg";
 import TypingEffect from "../../components/ui/TypingText";
-import HamburgerMenuOverlay from "../../components/ui/HamburgerMenuOverlay";
+import HamburgerMenuOverlay from "../../components/ui/hamburgerMenuOverlay";
 
 const menuItems = [
   { label: "Home", href: "/" },
