@@ -1,0 +1,263 @@
+/* ================================
+   BASE RESET
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   CONTACT SECTION (UPDATED)
+================================ */
+.contact-section {
+  display: flex;
+  gap: clamp(1.5rem, 4vw, 2rem);
+  align-items: center;
+  justify-content: center;
+
+  /* SAME WIDTH SYSTEM */
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+  padding-top: clamp(8vh, 12vh, 16vh);
+  padding-bottom: clamp(8vh, 12vh, 16vh);
+
+  min-height: 85vh;
+}
+
+/* ================================
+   LEFT COLUMN (INFO)
+================================ */
+.contact-info {
+  flex: 1 1 360px;
+  min-width: 280px;
+  border-radius: 12px;
+  padding: clamp(1.2rem, 3vw, 1.6rem);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ================================
+   RIGHT COLUMN (FORM)
+================================ */
+.contact-form {
+  flex: 1 1 420px;
+  min-width: 280px;
+  border-radius: 12px;
+  padding: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+/* ================================
+   INFO ITEMS
+================================ */
+.info-item {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.info-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-text {
+  font-size: 0.98rem;
+  word-break: break-word;
+}
+
+/* ================================
+   FORM STYLES
+================================ */
+.contact-form h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+}
+
+/* Inputs */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 0.95rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #a6c8ff;
+  box-shadow: 0 6px 20px rgba(102, 153, 255, 0.12);
+}
+
+/* ================================
+   FLOATING LABEL UI
+================================ */
+.form-group.floating input,
+.form-group.floating textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background: transparent;
+  transition: 0.2s ease;
+}
+
+.form-group.floating label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: #fff;
+  padding: 0 4px;
+  color: #777;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.form-group.floating input:focus + label,
+.form-group.floating input:not(:placeholder-shown) + label,
+.form-group.floating textarea:focus + label,
+.form-group.floating textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #0066ff;
+}
+
+/* ================================
+   BUTTON
+================================ */
+.button-form {
+  margin-top: 0.4rem;
+  width: 100%;
+  padding: 0.95rem 1rem;
+  font-size: 1.02rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #3b82f6, #1e40af);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(56, 120, 255, 0.18);
+}
+
+.button-form[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ================================
+   LINKS
+================================ */
+.contact-info a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.15rem 0.25rem;
+}
+
+/* ================================
+   VALIDATION STATES
+================================ */
+.input-error {
+  border: 2px solid #ff4d4d !important;
+  background-color: #ffecec;
+}
+
+.valid-glow {
+  border-color: #3ccf4e !important;
+  box-shadow: 0 0 6px #3ccf4e80;
+}
+
+.error-text {
+  color: #ff3b3b;
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+.shake {
+  animation: shakeAnim 0.3s ease-in-out;
+}
+
+@keyframes shakeAnim {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.success-pop {
+  animation: successAnim 0.6s ease-out;
+}
+
+@keyframes successAnim {
+  40% { transform: scale(1.03); }
+}
+
+/* ================================
+   TEXTAREA
+================================ */
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+/* ================================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* ================================
+   TABLETS
+================================ */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .contact-section {
+    max-width: 90vw;
+  }
+}
+
+/* ================================
+   LARGE SCREENS
+================================ */
+@media (min-width: 1440px) {
+  .contact-section {
+    max-width: 1320px;
+  }
+}

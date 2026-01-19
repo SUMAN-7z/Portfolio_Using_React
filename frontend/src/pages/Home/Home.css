@@ -1,0 +1,167 @@
+/* =========================
+   GLOBAL
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000f0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* =========================
+   DECRYPTED TEXT
+   ========================= */
+
+.all-letters {
+  background: linear-gradient(90deg, #ff006a, #ff6a00, #ff9500, #ff006a);
+  background-size: 300%;
+  animation: textGradient 6s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: clamp(0.9rem, 3vw, 1.4rem);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@keyframes textGradient {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+.sub {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  position: relative;
+}
+
+.f1,
+.f2 {
+  width: 100%;
+  height: auto;
+}
+
+.f2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 10vw, 10rem);
+  font-weight: 400;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0;
+  user-select: none;
+  color: #ecd8bd;
+}
+
+
+
+/* =========================
+   LANYARD
+   ========================= */
+
+.relative-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+}
+
+.lanyard-layer {
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =========================
+   ANIMATION
+   ========================= */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-up.delay-1 {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE (≤576px)
+   ========================= */
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .lanyard-layer {
+    display: none;
+  }
+}
+
+/* =========================
+   TABLET (≤768px)
+   ========================= */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 4.9rem;
+  }
+  .lanyard-layer {
+    display: none;
+  }
+}
+
+/* =========================
+   LARGE SCREENS (≥1200px)
+   ========================= */
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 15rem;
+  }
+}

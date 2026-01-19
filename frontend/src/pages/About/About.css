@@ -1,0 +1,260 @@
+/* ================================
+   BASE RESET
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   HERO SECTION (UPDATED)
+================================ */
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  /* SAME SYSTEM AS #Experience */
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+  padding-top: clamp(8vh, 12vh, 16vh);
+  padding-bottom: clamp(8vh, 12vh, 16vh);
+}
+
+/* ================================
+   CONTAINER (SIMPLIFIED)
+================================ */
+.container {
+  width: 100%;
+}
+
+/* ================================
+   GRID SYSTEM
+================================ */
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(2rem, 5vw, 2.5rem);
+  align-items: start;
+}
+
+/* Desktop */
+.left {
+  grid-column: span 8;
+}
+
+.right {
+  grid-column: span 4;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 992px) {
+  .left,
+  .right {
+    grid-column: span 12;
+  }
+}
+
+/* ================================
+   LEFT CONTENT
+================================ */
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.left .name {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: #fff;
+}
+
+.left .role {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin: 0.5rem 0 1rem;
+  color: #ddd;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+/* ================================
+   BUTTON GROUP
+================================ */
+.gap-3 {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gap-3 a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  min-height: 44px;
+  padding: 0.6rem 2.5rem;
+
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Primary */
+.a-1 {
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(
+    -60deg,
+    #a100ff,
+    #d300c0,
+    #ff006a,
+    #ff6a00,
+    #ff9500,
+    #ff6a00,
+    #a100ff
+  );
+  background-size: 500%;
+  animation: animate 10s ease-in-out infinite;
+}
+
+/* Icon */
+.a-2 {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+}
+
+/* Hover */
+.gap-3 a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ================================
+   ANIMATION
+================================ */
+@keyframes animate {
+  0% { background-position: 0 0; }
+  25% { background-position: 100% 0; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0 100%; }
+  100% { background-position: 0 0; }
+}
+
+/* ================================
+   RIGHT SIDE GRID
+================================ */
+.right {
+  display: flex;
+  justify-content: center;
+}
+
+.box-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.box {
+  width: 10rem;
+  height: 7rem;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.svg-icon {
+  width: 56px;
+  height: 56px;
+}
+
+/* ================================
+   FLOATING TAGS
+================================ */
+.icon-wrapper {
+  position: relative;
+}
+
+.floating-tag {
+  position: absolute;
+  background: #000;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.top-left { top: -22px; left: -22px; }
+.top-right { top: -22px; right: -22px; }
+
+/* ================================
+   TYPING EFFECT
+================================ */
+.typing-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+  color: #fff;
+}
+
+.typing-text,
+.typing-cursor {
+  font-size: clamp(1.2rem, 4vw, 3rem);
+  font-weight: 600;
+}
+
+.typing-cursor {
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ================================
+   TABLETS
+================================ */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .hero {
+    max-width: 90vw;
+  }
+}
+
+/* ================================
+   LARGE SCREENS
+================================ */
+@media (min-width: 1440px) {
+  .hero {
+    max-width: 1300px;
+  }
+}
