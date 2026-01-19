@@ -14,7 +14,7 @@ const corsOptions = {
   origin: "http://localhost:5173", // CHANGE in production
   methods: ["POST"],
   allowedHeaders: ["Content-Type"],
-  optionsSuccessStatus: 204
+  optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOptions));
@@ -27,7 +27,7 @@ app.options(/.*/, cors(corsOptions));
 ================================ */
 app.use((req, res, next) => {
   if (req.method !== "POST" && req.method !== "OPTIONS") {
-    return res.status(405).json({ message: "Method Not Allowed" });
+    return res.status(405).json({ message: "404 brain. 405 method." });
   }
   next();
 });
