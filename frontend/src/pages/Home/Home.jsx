@@ -1,7 +1,7 @@
 import Lanyard from "../../components/ui/Lanyard";
 import DecryptedText from "../../components/ui/DecryptedText";
 import "./Home.css";
-import HamburgerMenuOverlay from "../../components/ui/HamburgerMenuOverlay";
+import HamburgerMenuOverlay from "../../components/ui/hamburgerMenuOverlay";
 
 
 const menuItems = [
