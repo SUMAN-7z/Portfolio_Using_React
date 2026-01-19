@@ -76,9 +76,13 @@ const Contact = () => {
       return;
     }
 
+    // local host == http://localhost:5000/api/contact
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", form);
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/contact`,
+        form,
+      );
 
       toast.success(
         res.data?.message ||
@@ -86,7 +90,7 @@ const Contact = () => {
         {
           position: toastPos,
           autoClose: 3000,
-        }
+        },
       );
 
       setForm({ name: "", email: "", message: "" });
