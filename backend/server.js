@@ -11,7 +11,7 @@ const app = express();
    SECURE CORS CONFIG (POST ONLY)
 ================================ */
 const corsOptions = {
-  origin: "https://suman-7z.vercel.app", // CHANGE in production
+  origin: process.env.frontend_url, // CHANGE in production
   methods: ["POST"],
   allowedHeaders: ["Content-Type"],
   optionsSuccessStatus: 204,
