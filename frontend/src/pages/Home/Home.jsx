@@ -38,7 +38,7 @@ export default function Homes() {
             {/* Decrypted Text */}
             <div className="f2 col-12 col-lg-6 text-center text-lg-end">
               <DecryptedText
-                text="/* DEAD INSIDE, BUT THE CODE COMPILES. */"
+                text="/* git commit -m 'final final FINAL this time' */"
                 speed={60}
                 maxIterations={62}
                 characters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+!?"
