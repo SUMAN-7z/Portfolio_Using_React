@@ -1,6 +1,6 @@
 /* ===== Section Wrapper ===== */
 #Experience {
-  max-width: 1200px;                 /* Prevents ultra-wide stretch */
+  max-width: 1200px; /* Prevents ultra-wide stretch */
   width: 100%;
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vw, 3rem);
@@ -54,6 +54,7 @@
   margin-top: 0.5rem;
   line-height: 1.5;
   font-size: clamp(0.9rem, 2.2vw, 1rem);
+  list-style: disc;
 }
 
 /* ===== Skill Tags ===== */

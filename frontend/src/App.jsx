@@ -8,6 +8,9 @@ import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/PageNotFound/PageNotFound";
 import Experience from "./pages/Experience/Experience";
 import Education from "./pages/Education/Education";
+import Projects from "./pages/Projects/Projects";
+import Certificates from "./pages/Certificates/Certificates";
+
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -33,6 +36,8 @@ function App() {
               <About />
               <Experience/>
               <Education/>
+              <Projects/>
+              <Certificates/>
               <Contact />
             </>
           }

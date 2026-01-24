@@ -45,7 +45,7 @@ export default function Homes() {
                 parentClassName="all-letters"
                 encryptedClassName="encrypted"
                 loop={true}
-                loopDelay={3000}
+                loopDelay={3500}
               />
             </div>
           </div>

@@ -9,7 +9,7 @@ const HamburgerMenuOverlay = ({
   buttonLeft = "24px",
   buttonSize = "md",
   // buttonColor = "#ecd8bd",
-    buttonColor = "#fff",
+  buttonColor = "#fff",
   overlayBackground = "#000",
   textColor = "#000",
   fontSize = "md",
@@ -54,16 +54,31 @@ const HamburgerMenuOverlay = ({
   };
   useEffect(() => {
     if (isOpen) {
+      const scrollY = window.scrollY;
+
+      document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
-      document.body.style.touchAction = "none";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
     } else {
+      const scrollY = Math.abs(parseInt(document.body.style.top || "0", 10));
+
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
-      document.body.style.touchAction = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+
+      window.scrollTo(0, scrollY);
     }
 
     return () => {
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
-      document.body.style.touchAction = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
     };
   }, [isOpen]);
 
@@ -146,7 +161,7 @@ const HamburgerMenuOverlay = ({
         className={cn(
           `hamburger-overlay-${zIndex}`,
           isOpen && "open",
-          className
+          className,
         )}
       >
         <ul className="space-y-6">
@@ -157,7 +172,7 @@ const HamburgerMenuOverlay = ({
                 `menu-item-${zIndex}`,
                 fontSizes[fontSize],
                 isOpen && "visible",
-                menuItemClassName
+                menuItemClassName,
               )}
               style={{
                 transitionDelay: isOpen ? `${index * staggerDelay}s` : "0s",
@@ -179,7 +194,7 @@ const HamburgerMenuOverlay = ({
         className={cn(
           `hamburger-button-${zIndex}`,
           buttonSizes[buttonSize],
-          buttonClassName
+          buttonClassName,
         )}
         onClick={toggleMenu}
         aria-label={ariaLabel}

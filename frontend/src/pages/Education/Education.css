@@ -57,6 +57,9 @@ body {
   font-size: 1.1rem;
   flex-shrink: 0;
 }
+.icon {
+  color: #000;
+}
 
 /* ===== Text ===== */
 .edu-content h3 {
@@ -108,7 +111,7 @@ body {
 /* ===== Tablets ===== */
 @media (min-width: 769px) and (max-width: 1024px) {
   #Education {
-    max-width: 92vw;
+    max-width: 90vw;
   }
 
   .beam-wrapper {
@@ -119,7 +122,7 @@ body {
 /* ===== Large Screens ===== */
 @media (min-width: 1440px) {
   #Education {
-    max-width: 1300px;
+    max-width: 85vw;
   }
 
   .beam-wrapper {

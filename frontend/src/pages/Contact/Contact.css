@@ -98,7 +98,7 @@
 /* Inputs */
 .form-group input,
 .form-group textarea {
-  width: 100%;
+  width: 95%;
   padding: 0.9rem 0.95rem;
   font-size: 1rem;
   border-radius: 10px;
@@ -152,7 +152,7 @@
 ================================ */
 .button-form {
   margin-top: 0.4rem;
-  width: 100%;
+  width: 95%;
   padding: 0.95rem 1rem;
   font-size: 1.02rem;
   border-radius: 12px;
@@ -258,6 +258,6 @@ textarea {
 ================================ */
 @media (min-width: 1440px) {
   .contact-section {
-    max-width: 1320px;
+    max-width: 93vw;
   }
 }
