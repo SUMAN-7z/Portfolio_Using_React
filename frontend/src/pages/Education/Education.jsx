@@ -1,4 +1,6 @@
 import "./Education.css";
+import BeamCircle from "../../components/ui/beam-circle";
+import { Twitter, Github, Facebook, Youtube, Sun } from "lucide-react";
 
 export default function Education() {
   return (
@@ -6,14 +8,12 @@ export default function Education() {
       <h2 className="edu-title">Education</h2>
 
       <div className="edu-grid">
-        {/* LEFT COLUMN (col-6) */}
+        {/* LEFT COLUMN */}
         <div className="edu-left">
           <div className="edu-item">
             <div className="edu-icon">🎓</div>
             <div className="edu-content">
-              <h3>
-                Centurion University Of Technology & Management, Bhubaneswar
-              </h3>
+              <h3>Centurion University Of Technology & Management, Bhubaneswar</h3>
               <p className="edu-degree">MCA</p>
               <p className="edu-date">August 2025 – Present</p>
             </div>
@@ -40,16 +40,19 @@ export default function Education() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN (col-6) */}
+        {/* RIGHT COLUMN */}
         <div className="edu-right">
-          <h3 className="edu-right-title">Highlights</h3>
-
-          <ul className="edu-highlights">
-            <li>Consistent academic performance</li>
-            <li>Strong foundation in Computer Science</li>
-            <li>Hands-on project experience</li>
-            <li>Focused on frontend & full-stack development</li>
-          </ul>
+          <div className="beam-wrapper">
+            <BeamCircle
+              centerIcon={<Sun size={22} color="#000" />}
+              orbits={[
+                { id: 1, radiusFactor: 0.28, speed: 10, icon: <Facebook />, iconSize: 26 },
+                { id: 2, radiusFactor: 0.42, speed: 14, icon: <Github />, iconSize: 28 },
+                { id: 3, radiusFactor: 0.62, speed: 18, icon: <Twitter />, iconSize: 30 },
+                { id: 4, radiusFactor: 0.82, speed: 22, icon: <Youtube />, iconSize: 32 },
+              ]}
+            />
+          </div>
         </div>
       </div>
     </section>

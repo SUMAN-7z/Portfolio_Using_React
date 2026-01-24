@@ -1,92 +1,93 @@
+/* ===== Global safety ===== */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 /* ===== Section Wrapper ===== */
 #Education {
-  max-width: 1200px;                 /* Prevent ultra-wide stretch */
+  max-width: 1200px;
   width: 100%;
   margin-inline: auto;
-  padding-inline: clamp(1rem, 4vw, 3rem);
-  padding-top: clamp(8vh, 12vh, 16vh);
-  padding-bottom: clamp(8vh, 12vh, 16vh);
+  padding: clamp(4rem, 10vh, 8rem) clamp(1rem, 4vw, 3rem);
   color: #fff;
+  overflow-x: hidden;
 }
 
 /* ===== Title ===== */
 .edu-title {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
-  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
-/* ===== Grid (col-6 / col-6) ===== */
+/* ===== Grid ===== */
 .edu-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* col-6 / col-6 */
+  grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  width: 100%;
 }
 
 /* ===== Left Column ===== */
 .edu-left {
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 5vw, 2.5rem);
+  gap: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 /* ===== Education Item ===== */
 .edu-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .edu-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #f2f2f2;
   display: grid;
   place-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 /* ===== Text ===== */
 .edu-content h3 {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
   font-weight: 600;
-  margin: 0 0 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .edu-degree {
-  font-size: clamp(0.9rem, 2vw, 0.95rem);
-  margin: 0 0 0.3rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
 }
 
 .edu-date {
-  font-size: clamp(0.85rem, 2vw, 0.9rem);
+  font-size: 0.85rem;
   opacity: 0.7;
 }
 
-/* ===== Right Column ===== */
+/* ===== Right Column (CENTERED ALWAYS) ===== */
 .edu-right {
-  background: #f8f8f8;
-  border-radius: 12px;
-  padding: clamp(1.5rem, 4vw, 2rem);
-  color: #0f2a2a;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;   
 }
 
-.edu-right-title {
-  font-size: clamp(1.2rem, 3vw, 1.4rem);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
+/* ===== BeamCircle Wrapper ===== */
+.beam-wrapper {
+  aspect-ratio: 1 / 1;
+  position: relative;
 
-.edu-highlights {
-  padding-left: 1.2rem;
-}
-
-.edu-highlights li {
-  margin-bottom: 0.6rem;
-  line-height: 1.5;
-  font-size: clamp(0.9rem, 2.2vw, 1rem);
-  color: #444;
 }
 
 /* ===== Mobile ===== */
@@ -96,14 +97,22 @@
   }
 
   .edu-right {
-    margin-top: 1rem;
+    order: -1;
+  }
+
+  .beam-wrapper {
+    width: min(280px, 80vw);
   }
 }
 
 /* ===== Tablets ===== */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   #Education {
-    max-width: 90vw;
+    max-width: 92vw;
+  }
+
+  .beam-wrapper {
+    width: min(320px, 40vw);
   }
 }
 
@@ -111,5 +120,9 @@
 @media (min-width: 1440px) {
   #Education {
     max-width: 1300px;
+  }
+
+  .beam-wrapper {
+    width: 420px;
   }
 }
