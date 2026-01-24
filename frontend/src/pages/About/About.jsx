@@ -221,7 +221,7 @@ export default function About() {
               {/* Express */}
               <div className="icon-wrapper">
                 <div className="floating-tag top-right wave-tilt">Express</div>
-                <div className="box pulse">
+                <div className="box heart-pulse">
                   <svg
                     class="svg-icon"
                     xmlns="http://www.w3.org/2000/svg"
