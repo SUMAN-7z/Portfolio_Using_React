@@ -49,14 +49,14 @@ export default function Projects() {
               href="https://destination-booking.onrender.com/listings"
               className="btn primary"
             >
-              <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i>&nbsp;
+              <i className="fa-solid fa-person-walking-dashed-line-arrow-right"></i>&nbsp;
               Live Demo
             </a>
             <a
               href="https://github.com/SUMAN-7z/Destination-Booking"
               className="btn secondary"
             >
-              <i class="fa-solid fa-eye"></i> &nbsp;  View Code
+              <i className="fa-solid fa-eye"></i> &nbsp;  View Code
             </a>
           </div>
         </div>

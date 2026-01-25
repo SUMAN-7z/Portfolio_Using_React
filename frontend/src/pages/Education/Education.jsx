@@ -11,7 +11,7 @@ export default function Education() {
         {/* LEFT COLUMN */}
         <div className="edu-left">
           <div className="edu-item">
-            <div className="edu-icon"><i class="fa-solid fa-user-graduate icon "></i></div>
+            <div className="edu-icon"><i className="fa-solid fa-user-graduate icon "></i></div>
             <div className="edu-content">
               <h3>Centurion University Of Technology & Management, Bhubaneswar</h3>
               <p className="edu-degree">MCA</p>
@@ -20,7 +20,7 @@ export default function Education() {
           </div>
 
           <div className="edu-item">
-            <div className="edu-icon"><i class="fa-solid fa-school-flag icon"></i></div>
+            <div className="edu-icon"><i className="fa-solid fa-school-flag icon"></i></div>
             <div className="edu-content">
               <h3>Unipower School of IT & Management, Bhadrak</h3>
               <p className="edu-degree">BCA</p>
@@ -31,7 +31,7 @@ export default function Education() {
           </div>
 
           <div className="edu-item">
-            <div className="edu-icon"><i class="fa-solid fa-book icon"></i></div>
+            <div className="edu-icon"><i className="fa-solid fa-book icon"></i></div>
             <div className="edu-content">
               <h3>Tihidi Higher Secondary School, Bhadrak</h3>
               <p className="edu-degree">+2 in Science</p>

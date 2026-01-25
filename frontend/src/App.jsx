@@ -10,10 +10,11 @@ import Experience from "./pages/Experience/Experience";
 import Education from "./pages/Education/Education";
 import Projects from "./pages/Projects/Projects";
 import Certificates from "./pages/Certificates/Certificates";
-
+import Preloader from "./components/ui/Preloader";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const checkScreen = () => {
@@ -26,26 +27,31 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              {!isMobile && <Home />}
-              <About />
-              <Experience/>
-              <Education/>
-              <Projects/>
-              <Certificates/>
-              <Contact />
-            </>
-          }
-        />
+    <>
+      {loading && <Preloader onFinish={() => setLoading(false)} />}
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+      {!loading && (
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  {!isMobile && <Home />}
+                  <About />
+                  <Experience />
+                  <Education />
+                  <Projects />
+                  <Certificates />
+                  <Contact />
+                </>
+              }
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      )}
+    </>
   );
 }
 

@@ -113,15 +113,15 @@ export default function Certificates() {
             </ul>
 
             <div className="project-actions">
-<a
-              href="/assets/images/DSA-Certificate.pdf"
-              className="btn secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-solid fa-eye"></i>
-              &nbsp; View Certificate
-            </a>
+              <a
+                href="/assets/images/DSA-Certificate.pdf"
+                className="btn secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-eye"></i>
+                &nbsp; View Certificate
+              </a>
             </div>
           </div>
         </div>

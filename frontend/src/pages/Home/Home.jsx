@@ -3,15 +3,34 @@ import DecryptedText from "../../components/ui/DecryptedText";
 import "./Home.css";
 import HamburgerMenuOverlay from "../../components/ui/hamburgerMenuOverlay";
 
+import TerminalCard from "../../components/ui/terminal-card";
 
 const menuItems = [
-  { label: "Home" , href: "/" },
-  { label: "About" , href: "#About" },
-  { label: "Experience" , href: "#Experience" },
-  { label: "Project" , href: "#Project" },
-  { label: "Contact" , href: "#Contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "#About" },
+  { label: "Experience", href: "#Experience" },
+  { label: "Project", href: "#Project" },
+  { label: "Contact", href: "#Contact" },
 ];
 export default function Homes() {
+  const getGreetingCommand = (user = "User") => {
+    const hour = new Date().getHours();
+
+    if (hour >= 5 && hour < 12) {
+      return `Echo "Good morning, ${user} 🔆"`;
+    }
+
+    if (hour >= 12 && hour < 17) {
+      return `Echo "Good afternoon, ${user} 🌤️"`;
+    }
+
+    if (hour >= 17 && hour < 21) {
+      return `Echo "Good evening, ${user} 🌆"`;
+    }
+
+    return `Echo "Good night, ${user} 🌙"`;
+  };
+
   return (
     <>
       <div className="main_container">
@@ -34,6 +53,13 @@ export default function Homes() {
         {/* Hero Section */}
         <div className="hero-container">
           <div className="hero-text fade-in-up delay-1">
+            <div className="Great">
+              <TerminalCard
+                command={getGreetingCommand("User")}
+                // language="terminal"
+                language="bash"
+              />
+            </div>
             <h1 className="hero-title">PORTFOLIO</h1>
             {/* Decrypted Text */}
             <div className="f2 col-12 col-lg-6 text-center text-lg-end">

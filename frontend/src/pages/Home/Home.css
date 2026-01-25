@@ -13,6 +13,14 @@ body {
   overflow-x: hidden;
 }
 
+
+.Great{
+  display: flex;
+  color: #bfa57a;
+  padding-left: 20px;
+  font-size: 1.5rem;
+}
+
 /* =========================
    DECRYPTED TEXT
    ========================= */
