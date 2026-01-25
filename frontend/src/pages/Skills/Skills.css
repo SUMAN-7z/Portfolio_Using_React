@@ -1,0 +1,109 @@
+/* =========================
+   LAYOUT (GRID, NOT FLEX)
+========================= */
+.skills-section {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  color: #fff;
+}
+
+/* =========================
+   TEXT
+========================= */
+.skills-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 750;
+  opacity: 1;
+  transform: none;
+}
+
+.skills-content p {
+  color: #fff;
+  margin-bottom: 1rem;
+  opacity: 1;
+  transform: none;
+}
+
+/* =========================
+   BLOCKS
+========================= */
+.skills-block {
+  margin-bottom: 1rem;
+}
+
+.skills-block h3 {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   ICON GRID
+========================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  text-align: center;
+  opacity: 1;
+  transform: none;
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.skill-card span {
+  font-size: 0.85rem;
+  color: #fff;
+  display: flex;
+}
+
+/* =========================
+   IMAGE (HARD CAPPED)
+========================= */
+.skills-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .skills-section {
+    grid-template-columns: 1fr;
+    max-width: 97vw;
+  }
+}
+
+/* For Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skills-section {
+    grid-template-columns: 1fr;
+    max-width: 87vw;
+  }
+}
+
+/* For Large Screen */
+@media (min-width: 1440px) {
+  .skills-section {
+    grid-template-columns: 1.2fr 1fr;
+    max-width: 82vw;
+  }
+}

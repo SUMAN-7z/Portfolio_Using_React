@@ -49,7 +49,7 @@ const TerminalCard = ({ command, language = "tsx", className }) => {
       className={cn(
         "border rounded-lg backdrop-blur-md min-w-[300px] max-w-full",
         "bg-white/70 border-gray-300 text-black",
-        "dark:bg-white/10 dark:border-gray-400/30 dark:text-white",
+        "dark:bg-white/10 dark:border-gray-400/20 dark:text-white",
         className
       )}
     >

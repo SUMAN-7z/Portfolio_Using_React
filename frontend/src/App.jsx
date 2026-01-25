@@ -10,7 +10,9 @@ import Experience from "./pages/Experience/Experience";
 import Education from "./pages/Education/Education";
 import Projects from "./pages/Projects/Projects";
 import Certificates from "./pages/Certificates/Certificates";
-import Preloader from "./components/ui/Preloader";
+import Skills from "./pages/Skills/Skills";
+
+import Preloader from "./components/ui/Preloader/Preloader";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -41,6 +43,7 @@ function App() {
                   <About />
                   <Experience />
                   <Education />
+                  <Skills/>
                   <Projects />
                   <Certificates />
                   <Contact />
