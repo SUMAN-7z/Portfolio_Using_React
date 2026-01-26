@@ -2,6 +2,7 @@ import "./About.css";
 import ReactLogo from "/public/assets/images/react.svg";
 import TypingEffect from "../../components/ui/TypingText";
 import HamburgerMenuOverlay from "../../components/ui/hamburgerMenuOverlay";
+import TextScrollMarquee from "../../components/ui/text-scroll-marquee";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -14,14 +15,24 @@ export default function About() {
   return (
     <section className="hero mb-11" id="About">
       <HamburgerMenuOverlay
-          items={menuItems}
-          overlayBackground="linear-gradient(135deg, rgba(236,216,189,0.55) 0%, rgba(214,191,163,0.45) 50%, rgba(184,154,124,0.35) 100%)"
-          fontSize="xl"
-          enableBlur={true}
-          menuAlignment="center"
-          animationDuration={0.5}
-        />
+        items={menuItems}
+        overlayBackground="linear-gradient(135deg, rgba(236,216,189,0.55) 0%, rgba(214,191,163,0.45) 50%, rgba(184,154,124,0.35) 100%)"
+        fontSize="xl"
+        enableBlur={true}
+        menuAlignment="center"
+        animationDuration={0.5}
+      />
       <div className="container">
+        <TextScrollMarquee
+          baseVelocity={2}
+          direction="right"
+          className="text-9xl font-bold uppercase text-orange-100"
+          scrollDependent={false}
+          delay={500}
+        >
+          Welcome to My Portfolio! 🚀
+        </TextScrollMarquee>
+
         <div className="row">
           {/* LEFT */}
           <div className="col left">
@@ -234,6 +245,15 @@ export default function About() {
             </div>
           </div>
         </div>
+              <TextScrollMarquee
+                baseVelocity={2}
+                direction="left"
+                className="text-9xl font-bold uppercase text-orange-100"
+                scrollDependent={false}
+                delay={500}
+              >
+                Welcome to My Portfolio 🚀
+              </TextScrollMarquee>
       </div>
     </section>
   );
