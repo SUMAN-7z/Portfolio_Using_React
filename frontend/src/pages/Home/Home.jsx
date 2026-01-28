@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import Lanyard from "../../components/ui/Lanyard";
 import DecryptedText from "../../components/ui/DecryptedText";
 import "./Home.css";
@@ -31,8 +33,32 @@ export default function Homes() {
     return `Echo "Good night, ${user} 🌙"`;
   };
 
+  const [showVideo, setShowVideo] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => setFadeOut(true), 9000);
+    const removeTimer = setTimeout(() => setShowVideo(false), 10000);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
+
   return (
     <>
+      {showVideo && (
+        <video
+          className={`bg-video ${fadeOut ? "fade-out" : ""}`}
+          autoPlay
+          muted
+          playsInline
+        >
+          <source src="/assets/images/fluid.mp4" type="video/mp4" />
+        </video>
+      )}
+
       <div className="main_container">
         <HamburgerMenuOverlay
           items={menuItems}

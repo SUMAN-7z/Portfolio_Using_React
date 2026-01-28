@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollReveal from "./components/ui/ScrollReveal";
 
 import "./App.css";
 import Home from "./pages/Home/Home";

@@ -12,9 +12,22 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
 
+.bg-video.fade-out {
+  opacity: 0;
+}
 
-.Great{
+.Great {
   display: flex;
   color: #bfa57a;
   padding-left: 20px;
