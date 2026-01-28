@@ -26,7 +26,7 @@ export default function About() {
         <TextScrollMarquee
           baseVelocity={2}
           direction="right"
-          className="text-9xl font-bold uppercase text-orange-100"
+          className="text-6xl font-bold uppercase text-orange-100"
           scrollDependent={false}
           delay={500}
         >
@@ -248,7 +248,7 @@ export default function About() {
               <TextScrollMarquee
                 baseVelocity={2}
                 direction="left"
-                className="text-9xl font-bold uppercase text-orange-100"
+                className="text-6xl font-bold uppercase text-orange-100"
                 scrollDependent={false}
                 delay={500}
               >
