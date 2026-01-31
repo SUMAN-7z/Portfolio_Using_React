@@ -45,11 +45,12 @@
 
 /* Desktop */
 .left {
-  grid-column: span 6;
+  grid-column: span 7;
 }
 
 .right {
-  grid-column: span 6;
+  grid-column: span 5;
+
 }
 
 /* Tablet & Mobile */
@@ -70,7 +71,7 @@
 
 .left .name {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 200;
+  font-weight: 600;
   color: #fff;
 }
 
