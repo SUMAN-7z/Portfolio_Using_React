@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Squares from "../../components/ui/Squares ";
 
 import Lanyard from "../../components/ui/Lanyard";
 import DecryptedText from "../../components/ui/DecryptedText";

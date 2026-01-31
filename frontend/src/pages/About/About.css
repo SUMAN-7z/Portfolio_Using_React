@@ -24,7 +24,6 @@
   padding-inline: clamp(1rem, 4vw, 3rem);
   padding-top: clamp(8vh, 12vh, 16vh);
   padding-bottom: clamp(8vh, 12vh, 16vh);
-
 }
 
 /* ================================
@@ -32,7 +31,7 @@
 ================================ */
 .container {
   width: 100%;
-    background-color: #013220;
+  background-color: #1c2824;
   border-radius: 10px;
   padding: 50px;
 }
@@ -156,8 +155,6 @@
   border: 1px solid #ddd;
 }
 
-
-
 /* ================================
    ANIMATION
 ================================ */
@@ -280,7 +277,7 @@
    HEART BEAT ANIMATION
 ================================ */
 .heart-pulse {
-  animation: heartPulse 1.2s  infinite;
+  animation: heartPulse 1.2s infinite;
 }
 
 @keyframes heartPulse {
@@ -294,8 +291,6 @@
     transform: scale(1);
   }
 }
-
-
 
 /* Bounce */
 .bounce {
@@ -311,8 +306,6 @@
   }
 }
 
-
-
 /* Spin */
 .spin {
   animation: spin360 5s linear infinite;
@@ -325,8 +318,6 @@
     transform: rotate(360deg);
   }
 }
-
-
 
 /* Animation END */
 /* ================================
@@ -449,7 +440,7 @@
   .hero {
     max-width: 1300px;
   }
-  .box-main{
-      margin-top: 5vh;
+  .box-main {
+    margin-top: 5vh;
   }
 }
