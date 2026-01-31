@@ -24,6 +24,7 @@
   padding-inline: clamp(1rem, 4vw, 3rem);
   padding-top: clamp(8vh, 12vh, 16vh);
   padding-bottom: clamp(8vh, 12vh, 16vh);
+
 }
 
 /* ================================
@@ -31,6 +32,9 @@
 ================================ */
 .container {
   width: 100%;
+    background-color: #013220;
+  border-radius: 10px;
+  padding: 50px;
 }
 
 /* ================================

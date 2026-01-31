@@ -12,7 +12,7 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-.bg-video {
+/* .bg-video {
   position: fixed;
   inset: 0;
   width: 100vw;
@@ -25,7 +25,7 @@ body {
 
 .bg-video.fade-out {
   opacity: 0;
-}
+} */
 
 .Great {
   display: flex;

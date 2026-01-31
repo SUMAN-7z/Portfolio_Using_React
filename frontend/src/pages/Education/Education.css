@@ -83,14 +83,13 @@ body {
   width: 100%;
   display: grid;
   place-items: center;
-  overflow: hidden;   
+  overflow: hidden;
 }
 
 /* ===== BeamCircle Wrapper ===== */
 .beam-wrapper {
   aspect-ratio: 1 / 1;
   position: relative;
-
 }
 
 /* ===== Mobile ===== */
