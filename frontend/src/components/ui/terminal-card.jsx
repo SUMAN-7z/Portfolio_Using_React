@@ -10,7 +10,7 @@ const SyntaxHighlighter = lazy(() =>
   }))
 );
 
-const TerminalCard = ({ command, language = "tsx", className }) => {
+const TerminalCard = ({ command, language = "jsx", className }) => {
   const [copied, setCopied] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);

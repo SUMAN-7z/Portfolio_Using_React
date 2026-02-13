@@ -11,6 +11,7 @@ import Education from "./pages/Education/Education";
 import Projects from "./pages/Projects/Projects";
 import Certificates from "./pages/Certificates/Certificates";
 import Skills from "./pages/Skills/Skills";
+import AllMessages from "./pages/Contact/AllMessages";
 
 import Preloader from "./components/ui/Preloader/Preloader";
 
@@ -43,13 +44,14 @@ function App() {
                   <About />
                   <Experience />
                   <Education />
-                  <Skills/>
+                  <Skills />
                   <Projects />
                   <Certificates />
                   <Contact />
                 </>
               }
             />
+            <Route path="/AllMessages" element={<AllMessages />}></Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

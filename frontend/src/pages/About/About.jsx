@@ -2,8 +2,8 @@ import "./About.css";
 import ReactLogo from "/public/assets/images/react.svg";
 import TypingEffect from "../../components/ui/TypingText";
 import HamburgerMenuOverlay from "../../components/ui/hamburgerMenuOverlay";
-import TextScrollMarquee from "../../components/ui/text-scroll-marquee";
 import CurvedLoop from "../../components/ui/CurvedLoop";
+import AllMessages from "../Contact/Messages";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -24,16 +24,6 @@ export default function About() {
         animationDuration={0.5}
       />
       <div className="container">
-        {/* <TextScrollMarquee
-          baseVelocity={2}
-          direction="right"
-          className="text-6xl font-bold uppercase text-orange-100"
-          scrollDependent={false}
-          delay={500}
-        >
-          Welcome to My Portfolio! 🚀
-        </TextScrollMarquee> */}
-
         <div className="row">
           {/* LEFT */}
           <div className="col left">
@@ -246,15 +236,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* <TextScrollMarquee
-                baseVelocity={2}
-                direction="left"
-                className="text-6xl font-bold uppercase text-orange-100"
-                scrollDependent={false}
-                delay={500}
-              >
-                Welcome to My Portfolio 🚀
-              </TextScrollMarquee> */}
+
         <CurvedLoop
           marqueeText="Results over buzzwords"
           speed={2.5}
@@ -262,6 +244,7 @@ export default function About() {
           direction="left"
           interactive
         />
+        <AllMessages />
       </div>
     </section>
   );

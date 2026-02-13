@@ -8,29 +8,21 @@ dotenv.config();
 const app = express();
 
 /* ================================
-   SECURE CORS CONFIG (POST ONLY)
+   DATABASE CONNECT
+================================ */
+connectDB();
+
+/* ================================
+   CORS CONFIG
 ================================ */
 const corsOptions = {
-  origin: process.env.frontend_url, // CHANGE in production
-  methods: ["POST"],
+  origin: process.env.frontend_url,
+  methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
-  optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOptions));
-
-// ✅ FIX: use regex instead of "*"
 app.options(/.*/, cors(corsOptions));
-
-/* ================================
-   BLOCK NON-POST REQUESTS
-================================ */
-app.use((req, res, next) => {
-  if (req.method !== "POST" && req.method !== "OPTIONS") {
-    return res.status(405).json({ message: "404 brain. 405 method." });
-  }
-  next();
-});
 
 /* ================================
    BODY PARSER
@@ -43,14 +35,26 @@ app.use(express.json());
 app.use("/api/contact", contactRoutes);
 
 /* ================================
-   DATABASE
+   HEALTH CHECK
 ================================ */
-connectDB();
+app.get("/", (req, res) => {
+  res.send("API Running...");
+});
+
+/* ================================
+   404 HANDLER
+================================ */
+app.use((req, res) => {
+  res.status(404).json({
+    message: "Route not found",
+  });
+});
 
 /* ================================
    SERVER START
 ================================ */
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

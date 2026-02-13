@@ -18,18 +18,18 @@ export default function Homes() {
     const hour = new Date().getHours();
 
     if (hour >= 5 && hour < 12) {
-      return `Echo "Good morning, ${user} 🔆"`;
+      return `"Good morning, ${user} 🔆"`;
     }
 
     if (hour >= 12 && hour < 17) {
-      return `Echo "Good afternoon, ${user} 🌤️"`;
+      return `"Good afternoon, ${user} 🌤️"`;
     }
 
     if (hour >= 17 && hour < 21) {
-      return `Echo "Good evening, ${user} 🌆"`;
+      return `"Good evening, ${user} 🌆"`;
     }
 
-    return `Echo "Good night, ${user} 🌙"`;
+    return `"Good night, ${user} 🌙"`;
   };
 
   // const [showVideo, setShowVideo] = useState(true);
