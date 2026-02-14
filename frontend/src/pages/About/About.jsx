@@ -1,4 +1,6 @@
 import "./About.css";
+import { useEffect, useState } from "react";
+
 import ReactLogo from "/public/assets/images/react.svg";
 import TypingEffect from "../../components/ui/TypingText";
 import HamburgerMenuOverlay from "../../components/ui/hamburgerMenuOverlay";
@@ -13,6 +15,17 @@ const menuItems = [
   { label: "Contact", href: "#Contact" },
 ];
 export default function About() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
   return (
     <section className="hero mb-11" id="About">
       <HamburgerMenuOverlay
@@ -244,7 +257,7 @@ export default function About() {
           direction="left"
           interactive
         />
-        <AllMessages />
+        {!isMobile && <AllMessages />}
       </div>
     </section>
   );
