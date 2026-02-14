@@ -80,7 +80,7 @@ const Contact = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        import.meta.env.process.env.frontend_url,
+        import.meta.env.process.env.backend_url,
         form,
       );
 

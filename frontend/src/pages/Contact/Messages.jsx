@@ -16,7 +16,7 @@ function AllMessages() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await fetch(import.meta.env.process.env.frontend_url);
+        const res = await fetch(import.meta.env.process.env.backend_url);
 
         if (!res.ok) {
           throw new Error(`Server error: ${res.status}`);

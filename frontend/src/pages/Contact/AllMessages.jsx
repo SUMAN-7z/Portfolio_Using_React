@@ -12,7 +12,7 @@ function AllMessages() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await axios.get(import.meta.env.process.env.frontend_url);
+        const res = await axios.get(import.meta.env.process.env.backend_url);
 
         // Axios data comes directly in res.data
         const data = res.data;
