@@ -13,9 +13,7 @@ function AllMessages() {
     const fetchMessages = async () => {
       try {
         /* FIXED ENV VARIABLE ACCESS */
-        const res = await axios.get(
-          import.meta.env.VITE_BACKEND_URL + "/all-messages"
-        );
+        const res = await axios.get(import.meta.env.VITE_BACKEND_URL);
 
         const data = res.data;
 
@@ -46,11 +44,7 @@ function AllMessages() {
      ERROR UI
   ============================ */
   if (error) {
-    return (
-      <div className="text-center text-red-500 py-10">
-        {error}
-      </div>
-    );
+    return <div className="text-center text-red-500 py-10">{error}</div>;
   }
 
   /* ============================
