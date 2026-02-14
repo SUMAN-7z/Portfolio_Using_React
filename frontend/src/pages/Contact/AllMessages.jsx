@@ -14,7 +14,7 @@ function AllMessages() {
       try {
         /* FIXED ENV VARIABLE ACCESS */
         const res = await axios.get(
-          import.meta.env.VITE_BACKEND_URL + "/AllMessages"
+          import.meta.env.VITE_BACKEND_URL + "/all-messages"
         );
 
         const data = res.data;

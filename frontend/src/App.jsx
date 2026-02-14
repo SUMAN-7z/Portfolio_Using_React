@@ -86,7 +86,7 @@ function App() {
           />
 
           {/* ADMIN / MESSAGES */}
-          <Route path="/AllMessages" element={<AllMessages />} />
+          <Route path="/all-messages" element={<AllMessages />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
