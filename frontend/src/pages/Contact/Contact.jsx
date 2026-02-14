@@ -80,7 +80,7 @@ const Contact = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        `https://suman-backend-7z.onrender.com/api/contact`,
+        import.meta.env.process.env.frontend_url,
         form,
       );
 

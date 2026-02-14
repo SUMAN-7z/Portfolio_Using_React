@@ -16,9 +16,7 @@ function AllMessages() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await fetch(
-          "https://suman-backend-7z.onrender.com/api/contact",
-        );
+        const res = await fetch(import.meta.env.process.env.frontend_url);
 
         if (!res.ok) {
           throw new Error(`Server error: ${res.status}`);
